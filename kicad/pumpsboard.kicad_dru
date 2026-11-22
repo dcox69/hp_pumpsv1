@@ -1,0 +1,11 @@
+(version 1)
+(rule "GND et GNDPWR isolation"
+  (constraint clearance (min 0.5mm))
+  (condition "A.Net == 'GND' && B.Net == 'GNDPWR'")
+  (severity error)
+)
+(rule "+3v3 et +5V isolation"
+  (constraint clearance (min 1mm))
+  (condition "A.Net == '+3v3' && B.Net == '+5VP'")
+  (severity error)
+)
